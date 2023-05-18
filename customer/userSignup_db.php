@@ -1,6 +1,6 @@
 <?php 
 session_start(); 
-include "dbconn.php";
+include "../dbconn.php";
 
 if (isset($_POST['name']) && isset($_POST['contact'])
     && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['re_password'])) {

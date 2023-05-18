@@ -99,6 +99,7 @@ if  (isset($_POST['email']) && isset($_POST['pass'])) {
             return $data;
         }
 
+
         $email = validate($_POST['email']);
         $pass = validate($_POST['pass']);
 

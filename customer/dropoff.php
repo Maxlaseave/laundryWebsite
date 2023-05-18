@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="customer.css">
-    <link rel="stylesheet" href="bootstrap\css\bootstrap.css">
+    <link rel="stylesheet" href="../css/customer.css">
+    <link rel="stylesheet" href="../bootstrap/css\bootstrap.css">
 </head>
 <body>
 
 <nav class="navbar fixed-top navcolor navbar-expand-sm">
 	<div class="container">
 		<a class="navbar-brand item" href="#" style="font-size:20px;">
-			<img src="pash2_logo.png"  width="50" height="45">
+			<img src="../img/pashlogo.png"  width="50" height="45">
 			<strong>PashPash</strong> 
 		</a>
 		
@@ -61,47 +61,58 @@
 </nav>
 
 
-<form action="">
+<form action="" method ="POST">
 <div class="container text-center" style="margin-top: 150px;">
     <div class="row">
 
-        <div class="col">
-        
-            <div class="input-group mb-4">
-            <span class="input-group-text">Weight: </span>
-            <input type="number" class="form-control" name="weight" placeholder="kg">
-            <span class="input-group-text">Quantity: </span>
-            <input type="number" class="form-control" name="qty" placeholder="no. of washes/cycles">
-            </div>
+    <div class="col"> 
+        <div class="input-group mb-4">
+        <span class="input-group-text">No.of Loads: </span>
+        <input type="number" class="form-control" name="qty" placeholder="<= 7kg per Load" required>
         </div>
+    </div>
 
-        <div class="col">
-            <div class="input-group mb-4">
-            <span class="input-group-text">Type: </span>
-                <input type="text" class="form-control" name="type" placeholder="clothes, jeans, etc.">
-            </div>
+    <div class="col"> 
+        <div class="input-group mb-4">
+          <select class="form-select" name = "serviceType" aria-label="select service" required>
+            <option selected>Service Type</option>
+            <option value="1">Wash & Dry</option>
+            <option value="2">Wash</option>
+            <option value="3">Dry</option>
+          </select>
+
         </div>
     </div>
 
     <div class="row">
         <div class="col">
             <div class="input-group mb-4">
-            <span class="input-group-text"> Color: </span>
-                <input type="text" class="form-control" name="color" placeholder="whites, colored, etc.">
+              <select class="form-select" name = "timeSlot" aria-label="select service" required> 
+                <option selected>Time</option>
+                <option value="1">10:00 AM</option>
+                <option value="2">11:00 AM</option>
+                <option value="3">12:00 PM</option>
+                <option value="4">1:00 PM</option>
+                <option value="5">2:00 PM</option>
+                <option value="6">3:00 PM</option>
+                <option value="7">4:00 PM</option>                
+              </select>
             </div>
         </div>
+
         <div class="col">
-        
             <div class="input-group mb-4">
-            <span class="input-group-text">Date ordered: </span>
-            <input placeholder="Select date" type="date" class="form-control" name="sdate" >
+            <span class="input-group-text">Date: </span>
+            <input placeholder="Select date" type="date" class="form-control" name="sdate" required>
             </div>
         </div>
 
         <div class="input-group mb-4">
             <span class="input-group-text">Additional Remarks: </span>
             <input type="text" class="form-control" name="remarks" placeholder="optional" >
-          </div>
+        </div>  
+    </div>
+
     </div>
 </div>
 

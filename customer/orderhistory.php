@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="customer.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/customer.css">
+    <link rel="stylesheet" href="../bootstrap/css\bootstrap.css">
 </head>
 <body>
 
 <nav class="navbar fixed-top navcolor navbar-expand-sm">
 	<div class="container">
 		<a class="navbar-brand item" href="#" style="font-size:20px;">
-			<img src="pash2_logo.png"  width="50" height="45">
+			<img src="../img/pashlogo.png"  width="50" height="45">
 			<strong>PashPash</strong> 
 		</a>
 		
