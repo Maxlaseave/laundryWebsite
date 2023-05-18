@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Poppins:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+}
+
+form .error {
+    background: #F2DEDE;
+    color: #A94442;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    margin: 20px auto;
+ }
+ 
+ .success {
+    background: #D4EDDA;
+    color: #40754C;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    margin: 20px auto;
+ }
+.text-center h4{
+    font-family: 'Antonio', sans-serif;
+    color: #317A93;
+    font-size: 2.5em;
+}
+
+.h-100 {
+    background-color:  #D7E6E5;
+}
+
+
+#right-box {
+    background-color: #317A93;
+}
+
+#right-box h4 {
+    font-family: 'Antonio', sans-serif;
+    font-size: 5em;
+}
+
+#right-box h4 span {
+    font-family: 'Antonio', sans-serif;
+   color: #ddc03f;
+}
+
+
+
+
+ 
+ #no-arrow {
+    -moz-appearance: textfield;
+  }
+  #no-arrow::-webkit-inner-spin-button {
+    display: none;
+  }
+  #no-arrow::-webkit-outer-spin-button,
+  #no-arrow::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+    @media (min-width: 768px) {
+    .gradient-form {
+    height: 100vh !important;
+    }
+    }
+    @media (min-width: 769px) {
+    .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    }
+    }

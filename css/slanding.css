@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Antonio:wght@700&family=Poppins:wght@500&family=Wire+One&display=swap');
+
+.navcolor{
+    background-color: #d7e6e5;
+}
+
+.item{
+    font-size:14px;
+    margin-left: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.slogan{
+
+    margin-top: 250px;
+    margin-bottom: 250px;
+    display:block;
+    height:52vh;
+
+}
+
+h1{
+    font-family: 'Antonio', sans-serif;
+    color: #317a93;
+    font-size: 90px;
+    
+}
+
+.y{
+    color: #ddc03f;
+}
+
+.about{
+    background-color: #d7e6e5;
+    display:block;
+    padding-top: 280px;
+    padding-bottom: 300px;
+    height:100vh;
+}
+
+h2{
+    color: #317a93;
+    font-family: 'Antonio', sans-serif;
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+h3{
+    color: #343232;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    margin-left: 5px;
+    margin-top: 50px;
+}
+
+p{
+    color: #343232;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.services{
+    display:block;
+    padding-top: 150px;
+    padding-bottom: 250px;
+    height:90vh;
+}
+
+.serv img{
+
+    display: inline-block;
+    object-fit: contain;
+    padding: 20px 20px 20px 20px;
+    background-color: #d7e6e5;
+    border-radius: 15px;
+    margin-right: 15px;
+    margin-left: 10px;
+    width: 350px;
+    height: 350px;
+    margin-top: 45px;
+
+}
+
+
+footer{
+    background-color: #343232;
+    height: 60px;
+}
+
+footer p{
+    padding: 20px 20px 20px 20px;
+    color: white;
+}
+
