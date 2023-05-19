@@ -71,7 +71,7 @@
         <input type="number" class="form-control" name="qty" placeholder="<= 7kg per Load" required>
         </div>
     </div>
-
+qeweq
     <div class="col"> 
         <div class="input-group mb-4">
           <select class="form-select" name = "serviceType" aria-label="select service" required>
