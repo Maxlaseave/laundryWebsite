@@ -58,10 +58,8 @@
     </div>
 </nav>
 
-<div class="container slogan">
-	<h1 style="margin-top: 300px; color: #317a93; font-size: 90px;">FOR FAST & <br>AFFORDABLE<span class="y"><br>LAUNDRY</span></h1>
-	<h3>Open at 9:00am - 8:00pm</h3>
-
+<div class="container-xs pic">
+	<img src="../img/laundry.png" width="190.9%" height="890" style="margin-top:100px;">
 </div>
 
 <!--place image code for pic beside slogan here-->
