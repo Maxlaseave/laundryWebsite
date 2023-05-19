@@ -27,7 +27,6 @@
     color: white;
 }
 
-
 .slogan{
 
     margin-top: 200px;
@@ -35,6 +34,14 @@
     display:block;
     height:52vh;
 
+}
+
+.pic{
+
+    margin-bottom: 250px;
+    width: 100vh;
+    display:block;
+    height: 75vh;
 }
 
 h1{
@@ -109,5 +116,3 @@ hr{
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-
-
