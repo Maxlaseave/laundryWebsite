@@ -6,11 +6,11 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Admin Employee Login</title>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="userLogin.css">
+    <link rel="stylesheet" href="../css/userLogin.css">
 
     <!-- MDB -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="bootstrap\css\bootstrap.css" />
+    <link rel="stylesheet" href="../bootstrap/css\bootstrap.css" />
 
   </head>
 

@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 <body>
+
 <div class="container-nav">
-  <nav class="navbar navcolor navbar-expand-sm mb-3">
+  <nav class="navbar fixed-top navcolor navbar-expand-sm">
     <div class="container">
       <a class="navbar-brand item" href="#" style="font-size:20px;">
         <img src="../img/pashlogo.png"  width="50" height="45">
@@ -32,7 +33,7 @@
     </div>
   </nav>
 
-  <nav class="navbar navbar-expand-sm secnav"> 
+  <nav class="navbar fixed-top navbar-expand-sm secnav mb-1"> 
     <div class="container collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">

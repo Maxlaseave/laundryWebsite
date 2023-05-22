@@ -24,9 +24,10 @@ if (isset($_POST['dropOffSubmit'])) {
 
     // Retrieve user information from session
     $userId = $_SESSION['userId'];
+    $dropOffId = "D" . uniqid();
 
     // Insert the booking into the database
-    $sql = "INSERT INTO dropOff VALUES (NULL, '$loads', '$serviceType', '$timeSlot', '$bookingDate', '$additionalRemarks', '$userId')";
+    $sql = "INSERT INTO dropOff VALUES ('$dropOffId', '$loads', '$serviceType', '$timeSlot', '$bookingDate', '$additionalRemarks', '$userId')";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
@@ -69,7 +70,10 @@ if(isset($_POST['selfServiceSubmit'])) {
     $bookingDate = $_POST['sdate'];
     $additionalRemarks = $_POST['remarks'];
 
-    $sql = "INSERT INTO selfService VALUES (NULL, '$loads', '$serviceType', '$timeSlot', '$bookingDate', '$additionalRemarks')";
+    $userId = $_SESSION['userId'];
+    $selfServiceId = "S" . uniqid();
+
+    $sql = "INSERT INTO selfService VALUES ('$selfServiceId', '$loads', '$serviceType', '$timeSlot', '$bookingDate', '$additionalRemarks', '$userId')";
 
     $result = mysqli_query($conn, $sql);
 

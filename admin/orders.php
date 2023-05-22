@@ -1,19 +1,25 @@
-
-<?php include('partials/menu.php'); ?>
+<?php include('partials/adminDashboard.php'); ?>
 
 
 <?php
     session_start();
     include "../dbconn.php"; 
 
-    $userID = $_SESSION['userId'];
-    $sql1 = "SELECT * FROM selfService WHERE userId = $userID";
+    $sql1 = "SELECT * FROM selfService";
     $result1 = mysqli_query($conn, $sql1);
 
-    $sql2 = "SELECT * FROM dropoff WHERE userId = $userID";
+    $sql2 = "SELECT * FROM dropOff";
     $result2 = mysqli_query($conn, $sql2);
 ?>
 
+
+<section class="home-section">
+    <div class="home-content">
+      <!--logo-->
+      <img src="../img/pashlogo.png" width="50" height="45">
+      <span class="text">Orders</span>
+    </div>
+  </section>
 
 <div class = "table-responsive" style = "margin-top: 10%">
 <h1>Self Service</h1>
@@ -54,8 +60,9 @@
 </div>
 
 
-<h1>Drop-Off</h1>
+
 <div class = "table-responsive">
+<h1>Drop-Off</h1>
     <table class = "table table-secondary table-hover" id = "bookings" width = "80%" cellspacing = "0">
         <thead  class="thead-dark">
             <tr>
