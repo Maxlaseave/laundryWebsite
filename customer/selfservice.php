@@ -1,33 +1,6 @@
 <?php include('partials/menu.php'); ?>
 
-
-<?php
-session_start();
-include "../dbconn.php";
-
-if($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-    function validate($data){
-      $data = trim($data);
-      $data = stripslashes($data);
-      $data = htmlspecialchars($data);
-      return $data;
-    }
-
-    $loads = $_POST['qty'];
-    $serviceType = $_POST['serviceType'];
-    $timeSlot = $_POST['timeSlot'];
-    $bookingDate = $_POST['sdate'];
-    $additionalRemarks = $_POST['remarks'];
-
-    $sql = "INSERT INTO selfService VALUES (NULL, '$loads', '$serviceType', '$timeSlot', '$bookingDate', '$additionalRemarks')";
-
-    $result1 = mysqli_query($conn, $sql);
-
-}
-?>
-
-<form action="" method = "POST">
+<form action="process.php" method = "POST">
 <div class="container text-center" style="margin-top: 150px;">
     <div class="row">
 
@@ -74,7 +47,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-<button type="submit" name="SELFSERVICEsubmit" class="btn btn-light submit" style="padding: 5px 50px 5px 50px; 
+<button type="submit" name="selfServiceSubmit" class="btn btn-light submit" style="padding: 5px 50px 5px 50px; 
     margin: 20px;
     background-color: #d7e6e5;
     position: absolute;
@@ -88,12 +61,13 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     <hr>
     <p class="smalltitle"><strong>SELF-SERVICE LAUNDRY</strong></p>
     <p class="content" style="margin-left: 5px;">Wash you clothes easily with our Self-service laundry! Simply bring your laundry, dry cleaning, and/or specialty items to any PashPash branch near you. You only need to put it in the washing machines we have and wait for 1-2 hours to have your clothes clean and dry again.<br><br> Feel free to bring your own laundry agents or you may purchase at PashPash Laundryshop. <br><br>
-Maximum of 8 kilograms per cycle only. If your laundry is more than 8 kilograms and you need to increase the quantity of cycles above to indicate the number of cycles you have to use. <br><br>
-Once you book an appointment, PashPash gives you a priority number and you will be informed of the slots available beforehand. Time allowance of up to 10 minutes will be given for those who come late. After 10 minutes, the slot will be given to walk-in customers.</p>
-
-  
-</div>
+        Maximum of 8 kilograms per cycle only. If your laundry is more than 8 kilograms and you need to increase the quantity of cycles above to indicate the number of cycles you have to use. <br><br>
+        Once you book an appointment, PashPash gives you a priority number and you will be informed of the slots available beforehand. Time allowance of up to 10 minutes will be given for those who come late. After 10 minutes, the slot will be given to walk-in customers.</p>     
 </div>
 
-</body>
-</html>
+
+<?php
+
+include('partials/scripts.php');
+
+?>

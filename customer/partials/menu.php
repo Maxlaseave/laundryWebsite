@@ -26,7 +26,7 @@
                 </a>
             </li>
             <li class="nav-item item">
-                <a class="nav-link" href="login.php">
+                <a class="nav-link" href="userLogin.php">
                   Log out
                 </a>
             </li>
@@ -46,7 +46,7 @@
           <a class="nav-link" href="#about">ABOUT</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="#" style="color: #ddc03f;">DROP-OFF</a>
+        <a class="nav-link"  href="dropoff.php">DROP-OFF</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="selfservice.php">SELF-SERVICE</a>
