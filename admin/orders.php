@@ -24,7 +24,7 @@ $result2 = mysqli_query($conn, $sql2);
           <table class = "table table-secondary table-hover" id = "bookings" width = "80%" cellspacing = "0">
               <thead  class="thead-dark">
                   <tr>
-                      <th>Drop-Off ID</th>
+                      <th>ID</th>
                       <th>No. of Loads</th>
                       <th>Service Type</th>
                       <th>Time</th>
@@ -32,6 +32,7 @@ $result2 = mysqli_query($conn, $sql2);
                       <th>Additional Remarks</th>
                       <th>Name</th>
                       <th>Contact</th>
+                      <th>Status</th>
                   </tr>
               </thead>
               <tbody>
@@ -54,6 +55,7 @@ $result2 = mysqli_query($conn, $sql2);
                           <td><?php echo $row['additionalRemarks']; ?></td>
                           <td><?php echo $userRow['name']; ?></td>
                           <td><?php echo $userRow['contactNo']; ?></td>
+                          <td><?php echo $row['status']; ?></td>
                       </tr>
                   <?php
                   }
@@ -71,7 +73,7 @@ $result2 = mysqli_query($conn, $sql2);
         <table class="table table-secondary table-hover" id="bookings" width="50%" cellspacing="0">
             <thead class="thead-dark">
                 <tr>
-                    <th>Self Service ID</th>
+                    <th>ID</th>
                     <th>No. of Loads</th>
                     <th>Service Type</th>
                     <th>Time</th>
@@ -79,6 +81,7 @@ $result2 = mysqli_query($conn, $sql2);
                     <th>Additional Remarks</th>
                     <th>Name</th>
                     <th>Contact</th>
+                    <th>Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -100,6 +103,7 @@ $result2 = mysqli_query($conn, $sql2);
                             <td><?php echo $row['additionalRemarks']; ?></td>
                             <td><?php echo $userRow['name']; ?></td>
                             <td><?php echo $userRow['contactNo']; ?></td>
+                            <td><?php echo $row['status']; ?></td>
                         </tr>
                 <?php
                     }

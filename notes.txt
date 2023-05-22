@@ -1,0 +1,38 @@
+
+<---- CUSTOMER SIDE ---->
+ MY BOOKINGS
+    - make it show lang ang "Pending" and "In Progress" na status
+    - add button to cancel booking?
+
+ HOME
+    - ang pic header sa home
+
+ ORDER HISTORY
+    - once ang status kay ma "Completed" the orders will be transfered here
+
+<---- ADMIN SIDE ---->
+
+ ADMIN LOGIN
+    - 
+ ORDERS
+    - ipakita sad ang status
+
+ ADMIN 
+    - show admin
+    - add, update, delete employees
+ 
+ EMPLOYEES
+    - show employees
+    - add, update, delete employees
+
+<---- EMPLOYEE SIDE ---->
+
+ EMPLOYEE LOGIN
+    -
+
+ ORDERS
+    - add an update button beside status for changing the status
+    - "Pending", "In Progress", "Completed"
+    - should I add "Denied"?
+    - sila ra ka update sa status sa order
+
