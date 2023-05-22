@@ -5,3 +5,6 @@
 
 <!-- dashboard js -->
 <script src="../js/dashboard.js"></script>
+
+<!-- bootstrap js -->
+<script src="../bootstrap/js/bootstrap.js"></script>

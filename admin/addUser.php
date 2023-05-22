@@ -1,6 +1,4 @@
 
-<!-- add the frontend code above -->
-
 <?php 
     //Process the value from form and 
     session_start(); 

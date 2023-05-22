@@ -60,6 +60,18 @@
         </ul>
       </li>
       <li>
+        <a href="admins.php">
+        <i class=" bx bx-male"></i>
+          <span class="link_name">Admin</span>
+        </a>
+
+        <ul class="sub-menu">
+          <li><a class="link_name" href="admins.php">Admin</a></li>
+        </ul>
+      </li>
+      
+
+      <li>
         <a href="employees.php">
           <i class='bx bx-briefcase' ></i>
           <span class="link_name">Employees</span>
@@ -67,24 +79,41 @@
 
         <ul class="sub-menu">
           <li><a class="link_name" href="employees.php">Employees</a></li>
-          <li><a href="#">Branch 1</a></li>
-          <li><a href="#">Branch 2</a></li>
-          <li><a href="#">Branch 3</a></li>
         </ul>
       </li>
       
-      <li>
+    <li>
     <div class="profile-details">
       <div class="profile-content">
         <img src="../img/image-profile.png" alt="profileImg">
       </div>
       <div class="name-job">
-        <div class="profile_name">Prem Shahi</div>
-        <div class="job">Web Desginer</div>
-      </div>
-      <i class='bx bx-log-out' role="button" ></i>
-    </div>
-  </li>
+
+        <?php
+          include "../dbconn.php";
+          session_start();
+          $userId = $_SESSION['userId'];
+
+          $sql = "SELECT * FROM users WHERE userId = $userId";
+          $result = mysqli_query($conn, $sql);
+        ?>
+        <?php
+          if (mysqli_num_rows($result) === 1) {
+              $row = mysqli_fetch_assoc($result);
+              ?>
+              <div class="profile_name"><?php echo $row['name'];?> </div>
+              <div class="job"><?php echo $row['role'];?></div>
+              </div>
+              <a href="adminLogin.php" class="logout-link">
+                <i class='bx bx-log-out' role="button"></i>
+              </a>
+
+              </div> 
+          <?php
+          }
+        ?>
+
+
 </ul>
 </div>
 
@@ -106,5 +135,6 @@
   </script>
 
 <?php include('partials/scripts.php'); ?>
+
 </body>
 </html>

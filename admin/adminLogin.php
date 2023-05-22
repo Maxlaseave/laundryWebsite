@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Admin Employee Login</title>
+    <title>Admin Login</title>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/userLogin.css">
 
@@ -23,13 +23,13 @@
           <div class="card-body p-5 text-center">
             <div class="mb-md-5 mt-md-4 pb-5">
 
-              <form action = "adminLogin_db.php" method = "POST">
+              <form action = "adminProcess.php" method = "POST">
 
                 <?php if (isset($_GET['error'])) { ?>
                     <p class="error"><?php echo $_GET['error']; ?></p>
                 <?php } ?>
                 
-                <h2 class="fw-bold mb-2 text-uppercase">ADMIN EMPLOYEE Login</h2>
+                <h2 class="fw-bold mb-2 text-uppercase">ADMIN Login</h2>
                 <p class="text-white-50 mb-5">Please enter your login and password!</p>
 
                 <div class="form-outline form-white mb-4">
@@ -43,7 +43,7 @@
                 </div>
 
 
-                <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+                <button class="btn btn-outline-light btn-lg px-5" type="submit" name = "adminLogin">Login</button>
 
 
               </form>

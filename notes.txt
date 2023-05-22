@@ -9,6 +9,7 @@
 
  ORDER HISTORY
     - once ang status kay ma "Completed" the orders will be transfered here
+    - ipakita lang diri ang "Completed" na status
 
 <---- ADMIN SIDE ---->
 

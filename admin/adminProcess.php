@@ -2,8 +2,8 @@
 session_start(); 
 include "dbconn.php";
 
-if (isset($_POST['email']) && isset($_POST['pass'])) {
-
+// LOGIN
+if (isset($_POST['adminLogin'])) {
 	function validate($data){
 		$data = trim($data);
 		$data = stripslashes($data);
