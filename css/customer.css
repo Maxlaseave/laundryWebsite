@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Antonio:wght@700&family=Poppins:wght@500&family=Wire+One&display=swap');
 
+
+* {
+    box-sizing: border-box;
+}
 .navcolor{
     background-color: #d7e6e5;
 }
@@ -33,9 +37,49 @@
     margin-bottom: 250px;
     display:block;
     height:52vh;
-
 }
 
+.header-bg img{
+    width: 2000px;
+    height: 100vh;   
+    position: relative;
+    background-color: #343a40;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+@media (min-width: 768px) {
+    .header-bg img {
+      padding-top: 12rem;
+      padding-bottom: 12rem;
+    }
+}
+/*.bg-image{
+    margin-top: 100px;
+}
+#header {
+     
+    width: 2000px;
+    height: 100vh;   
+    position: relative;
+    background-color: #343a40;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+       
+
+}
+@media (min-width: 768px) {
+    #header {
+      padding-top: 12rem;
+      padding-bottom: 12rem;
+    }
+
+  }
+*/
 .pic{
 
     margin-bottom: 250px;

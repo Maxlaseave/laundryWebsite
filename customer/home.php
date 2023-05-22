@@ -58,9 +58,6 @@
     </div>
 </nav>
 
-<div class="container-xs pic">
-	<img src="../img/laundry.png" width="190.9%" height="890" style="margin-top:100px;">
-</div>
 
 <!--place image code for pic beside slogan here-->
 

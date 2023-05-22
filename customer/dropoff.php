@@ -71,14 +71,14 @@
         <input type="number" class="form-control" name="qty" placeholder="<= 7kg per Load" required>
         </div>
     </div>
-qeweq
+
     <div class="col"> 
         <div class="input-group mb-4">
+        <span class="input-group-text">Service Type: </span>
           <select class="form-select" name = "serviceType" aria-label="select service" required>
-            <option selected>Service Type</option>
             <option value="1">Wash & Dry</option>
-            <option value="2">Wash</option>
-            <option value="3">Dry</option>
+            <option value="2">Wash Only</option>
+            <option value="3">Dry Only</option>
           </select>
 
         </div>
@@ -87,23 +87,15 @@ qeweq
     <div class="row">
         <div class="col">
             <div class="input-group mb-4">
-              <select class="form-select" name = "timeSlot" aria-label="select service" required> 
-                <option selected>Time</option>
-                <option value="1">10:00 AM</option>
-                <option value="2">11:00 AM</option>
-                <option value="3">12:00 PM</option>
-                <option value="4">1:00 PM</option>
-                <option value="5">2:00 PM</option>
-                <option value="6">3:00 PM</option>
-                <option value="7">4:00 PM</option>                
-              </select>
+            <span class="input-group-text">Self Service Date: </span>
+            <input type="date" class="form-control" name="sdate" required>
             </div>
         </div>
 
         <div class="col">
             <div class="input-group mb-4">
-            <span class="input-group-text">Date: </span>
-            <input placeholder="Select date" type="date" class="form-control" name="sdate" required>
+              <span class="input-group-text">Self Service Time: </span>
+              <input type="time" class="form-control"  name="timeSlot" required>
             </div>
         </div>
 
