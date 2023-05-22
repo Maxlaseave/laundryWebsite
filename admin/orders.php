@@ -115,6 +115,6 @@ $result2 = mysqli_query($conn, $sql2);
         </table>
     </div>
 
-
 </section>
-
+<?php
+end 
