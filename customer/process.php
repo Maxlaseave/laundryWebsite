@@ -25,9 +25,10 @@ if (isset($_POST['dropOffSubmit'])) {
     // Retrieve user information from session
     $userId = $_SESSION['userId'];
     $dropOffId = "D" . uniqid();
+    $status = "Pending";
 
     // Insert the booking into the database
-    $sql = "INSERT INTO dropOff VALUES ('$dropOffId', '$loads', '$serviceType', '$timeSlot', '$bookingDate', '$additionalRemarks', '$userId')";
+    $sql = "INSERT INTO dropOff VALUES ('$dropOffId', '$loads', '$serviceType', '$timeSlot', '$bookingDate', '$additionalRemarks', '$userId', '$status')";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
@@ -72,8 +73,10 @@ if(isset($_POST['selfServiceSubmit'])) {
 
     $userId = $_SESSION['userId'];
     $selfServiceId = "S" . uniqid();
+    $status = "Pending";
 
-    $sql = "INSERT INTO selfService VALUES ('$selfServiceId', '$loads', '$serviceType', '$timeSlot', '$bookingDate', '$additionalRemarks', '$userId')";
+
+    $sql = "INSERT INTO selfService VALUES ('$selfServiceId', '$loads', '$serviceType', '$timeSlot', '$bookingDate', '$additionalRemarks', '$userId', '$status')";
 
     $result = mysqli_query($conn, $sql);
 
@@ -82,7 +85,7 @@ if(isset($_POST['selfServiceSubmit'])) {
         // You can redirect the user to a success page or perform any other necessary actions
         $_SESSION['status'] = "Schedule Submitted";
         $_SESSION['status_code'] = "success";
-        header("Location: selfservice.php");
+        header("Location: mybookings.php");
         exit();
     } else {
         // Error occurred while inserting the booking

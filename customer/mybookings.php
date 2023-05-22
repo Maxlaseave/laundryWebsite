@@ -18,14 +18,15 @@
 <div class = "table-responsive" style = "margin-top: 10%">
 <h1>Self Service</h1>
     <table class = "table table-secondary table-hover" id = "bookings" width = "50%" cellspacing = "0">
-        <thead class="thead-dark">
+        <thead>
             <tr>
-                <th>Self Service ID</th>
+                <th>ID</th>
                 <th>No. of Loads</th>
                 <th>Service Type</th>
                 <th>Time</th>
                 <th>Date</th>
                 <th>Additional Remarks</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
@@ -41,6 +42,7 @@
                     <td><?php echo $row['timeSlot']; ?></td>
                     <td><?php echo $row['bookingDate']; ?></td>
                     <td><?php echo $row['additionalRemarks']; ?></td>
+                    <td><?php echo $row['status']; ?></td>
                 </tr>
             <?php
             }
@@ -56,15 +58,16 @@
 
 <h1>Drop-Off</h1>
 <div class = "table-responsive">
-    <table class = "table table-secondary table-hover" id = "bookings" width = "80%" cellspacing = "0">
-        <thead  class="thead-dark">
+    <table class = "table table-secondary table-hover" id = "bookings" width = "50%" cellspacing = "0">
+        <thead>
             <tr>
-                <th>Drop-Off ID</th>
+                <th>ID</th>
                 <th>No. of Loads</th>
                 <th>Service Type</th>
                 <th>Time</th>
                 <th>Date</th>
                 <th>Additional Remarks</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
@@ -80,6 +83,7 @@
                     <td><?php echo $row['timeSlot']; ?></td>
                     <td><?php echo $row['bookingDate']; ?></td>
                     <td><?php echo $row['additionalRemarks']; ?></td>
+                    <td><?php echo $row['status']; ?></td>
                 </tr>
             <?php
             }

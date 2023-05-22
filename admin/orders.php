@@ -24,7 +24,7 @@ $result2 = mysqli_query($conn, $sql2);
           <table class = "table table-secondary table-hover" id = "bookings" width = "80%" cellspacing = "0">
               <thead  class="thead-dark">
                   <tr>
-                      <th>Drop-Off ID</th>
+                      <th>ID</th>
                       <th>No. of Loads</th>
                       <th>Service Type</th>
                       <th>Time</th>
@@ -71,7 +71,7 @@ $result2 = mysqli_query($conn, $sql2);
         <table class="table table-secondary table-hover" id="bookings" width="50%" cellspacing="0">
             <thead class="thead-dark">
                 <tr>
-                    <th>Self Service ID</th>
+                    <th>ID</th>
                     <th>No. of Loads</th>
                     <th>Service Type</th>
                     <th>Time</th>
