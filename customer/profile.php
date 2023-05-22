@@ -1,3 +1,5 @@
+<?php include('partials/menu.php'); ?>
+
 <?php
 include "../dbconn.php";
 // Start the session (if not already started)
