@@ -160,3 +160,9 @@ hr{
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
+/* for nav bar */
+
+.container-nav {
+    margin-bottom: 40%;
+}

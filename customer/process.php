@@ -1,4 +1,8 @@
 <?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 session_start();
 include "../dbconn.php"; 
 
@@ -26,16 +30,27 @@ if (isset($_POST['dropOffSubmit'])) {
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
-        $_SESSION['status'] = "Schedule Submitted";
-        $_SESSION['status_code'] = "success";
-        header("Location: dropoff.php");
+        ?>
+            <script>
+                swal({
+                    title: "success",  
+                    icon: "error",
+                    button: "Done",
+                });
+            </script>
+        <?php
+            unset($_SESSION['status']);
+        header("Location: mybookings.php");
+        exit();
         
     } else {
         $_SESSION['status'] = "Schedule Not Submitted";
         $_SESSION['status_code'] = "error";
         header("Location: dropoff.php");  
+        exit();
     }
 }
+
 
 
 //process for self service
@@ -110,12 +125,10 @@ if(isset($_POST['updateProfile'])) {
     }
 }
 
-
 ?>
-
 
 <?php
 
-    include('partials/scripts.php');
+include('partials/scripts.js');
 
 ?>

@@ -66,8 +66,3 @@
 
 
 
-<?php
-
-include('partials/scripts.php');
-
-?> 
