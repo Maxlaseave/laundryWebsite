@@ -32,6 +32,7 @@ $result2 = mysqli_query($conn, $sql2);
                       <th>Additional Remarks</th>
                       <th>Name</th>
                       <th>Contact</th>
+                      <th>Status</th>
                   </tr>
               </thead>
               <tbody>
@@ -54,6 +55,7 @@ $result2 = mysqli_query($conn, $sql2);
                           <td><?php echo $row['additionalRemarks']; ?></td>
                           <td><?php echo $userRow['name']; ?></td>
                           <td><?php echo $userRow['contactNo']; ?></td>
+                          <td><?php echo $row['status']; ?></td>
                       </tr>
                   <?php
                   }
@@ -79,6 +81,7 @@ $result2 = mysqli_query($conn, $sql2);
                     <th>Additional Remarks</th>
                     <th>Name</th>
                     <th>Contact</th>
+                    <th>Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -100,6 +103,7 @@ $result2 = mysqli_query($conn, $sql2);
                             <td><?php echo $row['additionalRemarks']; ?></td>
                             <td><?php echo $userRow['name']; ?></td>
                             <td><?php echo $userRow['contactNo']; ?></td>
+                            <td><?php echo $row['status']; ?></td>
                         </tr>
                 <?php
                     }
