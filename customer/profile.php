@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>User Login</title>
+    <title>Profile</title>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/userLogin.css">
 
@@ -51,6 +51,7 @@ if (isset($_SESSION['userId'])) {
     $sql = "SELECT * FROM users WHERE userId = $userId";
     $result = mysqli_query($conn, $sql);
 
+  
     // Check if a user record was found
     if (mysqli_num_rows($result) === 1) {
         $row = mysqli_fetch_assoc($result);
@@ -58,7 +59,6 @@ if (isset($_SESSION['userId'])) {
         //Saves prev data to be viewed by users when editing their information for cpnvenience
         $pname = $row['name'];
         $pemail = $row['email'];
-        $ppass = $row['password'];
         $pcon = $row['contactNo'];
 
         // Display the user's profile information
@@ -100,26 +100,26 @@ if (isset($_SESSION['userId'])) {
                 <div class="col">
                 <div class="input-group mb-4">
                 <span class="input-group-text">Name: </span>
-                <input type="text" class="form-control" name="name">
+                <input type="text" class="form-control" name="name" placeholder="Enter name" value="<?php echo $pname;?>">
                 </div>
 
                 <div class="col">
                 <div class="input-group mb-4">
                 <span class="input-group-text">Email: </span>
-                <input type="email" class="form-control" name="email"><br>
+                <input type="email" class="form-control" name="email" placeholder="Enter email" value="<?php echo $pemail;?>"><br>
                 </div>
 
 
                 <div class="col">
                 <div class="input-group mb-4">
                 <span class="input-group-text">Password: </span>
-                <input type="text"class="form-control" name="password"><br>
+                <input type="text"class="form-control" name="password" placeholder="Enter password"><br>
                 </div>
 
                 <div class="col">
                 <div class="input-group mb-1">
-                <span class="input-group-text">Contact No.: </span>
-                <input type="number" class="form-control" name="contactNo"><br>
+                <span class="input-group-text">Contact No: </span>
+                <input type="number" class="form-control" name="contactNo" placeholder="Enter contact number" value="<?php echo $pcon;?>"><br>
                 </div>
 
                 <div class="text-center pt-1 mb-3 pb-1">

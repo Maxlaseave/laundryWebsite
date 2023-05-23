@@ -98,14 +98,14 @@
                         </div>
                  </div>
 
-                 <div class="row mb-3">
+                 <div class="row mb-4">
                     <i class="col-sm-1 bi bi-file-lock-fill"></i>
                         <div class="col-sm-10">
                             <input type="password" name="password" class="form-control"  placeholder = "Password">
                         </div>
                  </div>
 
-                 <div class="row mb-3">
+                 <div class="row mb-5">
                     <i class="col-sm-1 bi-file-lock2"></i>
                         <div class="col-sm-10">
                             <input type="password" name="re_password" class="form-control" placeholder = "Repeat Password">
