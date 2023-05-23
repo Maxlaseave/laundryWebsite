@@ -118,11 +118,22 @@ h3{
     margin-top: 50px;
 }
 
+
+
+h5{
+    color: #343232;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
 p .content{
     color: #343232;
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
     font-weight: 300;
+    margin-right: 5px;
+    display: inline;
 }
 
 span{
@@ -166,3 +177,4 @@ hr{
 .container-nav {
     margin-bottom: 40%;
 }
+
