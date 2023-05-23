@@ -22,8 +22,7 @@
         <div class="card bg-dark text-white" style="border-radius: 1rem;">
           <div class="card-body p-5 text-center">
             <div class="mb-md-5 mt-md-4 pb-5">
-
-              <form action = "adminProcess.php" method = "POST">
+              <form action ="adminLogin_db.php" method = "POST">
 
                 <?php if (isset($_GET['error'])) { ?>
                     <p class="error"><?php echo $_GET['error']; ?></p>
@@ -38,7 +37,7 @@
                 </div>
 
                 <div class="form-outline form-white mb-4">
-                  <input type="password" name="pass" class="form-control form-control-lg" />
+                  <input type="password" name="password" class="form-control form-control-lg" />
                   <label class="form-label">Password</label>
                 </div>
 
@@ -57,5 +56,6 @@
     </div>
   </div>
 </section>
+
 </body>
 </html>

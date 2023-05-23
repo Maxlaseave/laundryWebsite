@@ -20,7 +20,7 @@
 
  ADMIN 
     - show admin
-    - add, update, delete employees
+    - add, update, delete employees and admin
  
  EMPLOYEES
     - show employees

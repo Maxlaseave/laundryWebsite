@@ -1,54 +1,99 @@
 <?php 
 session_start(); 
-include "dbconn.php";
+include "../dbconn.php";
+//add admin
 
-// LOGIN
-if (isset($_POST['adminLogin'])) {
+if(isset($_POST['reg-admin'])){
+
 	function validate($data){
 		$data = trim($data);
 		$data = stripslashes($data);
 		$data = htmlspecialchars($data);
 		return $data;
-	}
+	}	
 
-	$email = validate($_POST['email']);
-	$pass = validate($_POST['pass']);
+	$name = $_POST['name'];
+	$contact = $_POST['contact'];
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+	$re_password = $_POST['re_password'];
+	$role = "Admin";
 
-	if (empty($email)) {
-		header("Location: adminLogin.php?error=User Name is required");
-	    exit();
-	} else if (empty($pass)) {
-        header("Location: adminLogin.php?error=Password is required");
-	    exit();
-	} else {
-		//$pass = md5($pass);
-		$sql = "SELECT * FROM users WHERE email = '$email' AND password ='$pass'";
+	if($password === $re_password) {
 
+		$password = md5($password);
+
+		$sql = "INSERT INTO users VALUES (NULL, '$name','$email','$password','$contact', '$role')";
 		$result = mysqli_query($conn, $sql);
 
-		if (mysqli_num_rows($result) === 1) {
-			$row = mysqli_fetch_assoc($result);
-            $_SESSION['email'] = $row['email'];
-            $_SESSION['name'] = $row['name'];
-            $_SESSION['userId'] = $row['userId'];
-
-            // Retrieve the role from the database
-            $role = $row['role'];
-
-            if ($role === "Admin") {
-                $_SESSION['role'] = "Admin";
-                header("Location: home.php");
-            } else {
-                $_SESSION['role'] = "Employee";
-                header("Location: adminLogin.php?error=Incorrect username or password");
-            }
-            exit();
-        } else {
-            header("Location: adminLogin.php?error=Incorrect username or password");
-            exit();
-        }
+		if($result) {
+			echo "Saved";
+			$_SESSION['success'] = "Admin Profile Added";
+			header('Location: admins.php'); //change to move to a different modal
+			
+		}
+		else {
+			$_SESSION['status'] = "Admin Profile Not Added";
+			header('Location: admins.php');
+		}	
 	}
-} else {
-	header("Location: home.php");
-	exit();
+	else {
+		$_SESSION['status'] = "Passwords Do Not Match";
+		echo "<script>
+            const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+            modal.show();
+          </script>";
+		header('Location: admins.php');
+	}
 }
+
+
+if(isset($_POST['update-btn'])){
+
+	function validate($data){
+		$data = trim($data);
+		$data = stripslashes($data);
+		$data = htmlspecialchars($data);
+		return $data;
+	}	
+	$userId = $_POST['edit_id'];
+	$newName = $_POST['editName'];
+	$newEmail = $_POST['editEmail'];
+	$newContact = $_POST['editContact'];
+	$newPass = $_POST['editPass'];
+
+	$newPass = md5($newPass);
+	$update = "UPDATE users SET name ='$newName', email ='$newEmail', contactNo='$newContact', password='$newPass' WHERE userId='$userId'"; 
+	$result = mysqli_query($conn, $update);
+
+	if($result){
+		$_SESSION['success'] = "Admin Profile Updated";
+		header('Location: admins.php');
+
+	}
+	else {
+
+		$_SESSION['status'] = "Admin Profile Not Updated";
+		header('Location: admins.php');
+	}
+}
+
+
+if(isset($_POST['delete-btn'])) {
+
+	$userId = $_POST['delete_id'];
+
+	$delete = "DELETE FROM users WHERE userId='$userId'";
+	$result = mysqli_query($conn, $delete);
+
+	if($result) {
+		$_SESSION['success'] = "Admin Profile Successfully Deleted";
+		header('Location: admins.php');
+	}
+	else {
+		$_SESSION['status'] = "Admin Profile Not Deleted";
+		header('Location: admins.php');
+	}
+	
+}
+?>

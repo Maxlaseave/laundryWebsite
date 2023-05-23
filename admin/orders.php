@@ -2,7 +2,6 @@
 
 
 <?php
-session_start();
 include "../dbconn.php"; 
 
 $sql1 = "SELECT * FROM selfService";
@@ -117,4 +116,4 @@ $result2 = mysqli_query($conn, $sql2);
 
 </section>
 <?php
-end 
+
