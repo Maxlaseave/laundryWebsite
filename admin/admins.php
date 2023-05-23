@@ -9,12 +9,6 @@
       <span class="text">Admins</span>
     </div>
 
-    <!-- Button trigger modal -->
-    <div class="container-sm">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal" s>
-            Add Admin
-        </button> 
-    </div>
 
 
     <!-- Add Modal -->
@@ -63,57 +57,70 @@
 
 
 <!-- Admin Table -->
-<div class="table-responsive" style="margin-top: 5%" id="tables">
-    <table class="table table-secondary table-hover" id="admins">
-        <thead class="thead-dark">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Contact</th>
-            <th>Edit</th>
-            <th>Delete</th>
-        </tr>
-        </thead>
-        <tbody>
-        <?php
-        $adminRole = 'Admin'; 
-        $userSql = "SELECT * FROM users WHERE role = '$adminRole'";
-        $userResult = mysqli_query($conn, $userSql);
 
-        if ($userResult && mysqli_num_rows($userResult) > 0) {
-            while ($row = mysqli_fetch_assoc($userResult)) {
-                ?>
-                <tr>
-                    <td><?php echo $row['userId']; ?></td>
-                    <td><?php echo $row['name']; ?></td>
-                    <td><?php echo $row['email']; ?></td>
-                    <td><?php echo $row['contactNo']; ?></td>
+<div class="container-fluid">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Add Admin
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal" s>
+                    Add Admin
+                </button> 
+                </h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive" id="tables">
+                    <table class="table table-bordered table-hover" id="admins">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Contact</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        $adminRole = 'Admin'; 
+                        $userSql = "SELECT * FROM users WHERE role = '$adminRole'";
+                        $userResult = mysqli_query($conn, $userSql);
 
-                    <td>
-                        <form action="adminEdit.php" method="post">
-                            <input type="hidden" name="edit_id" value="<?php echo $row['userId']; ?>">
-                            <button class="btn btn-outline-success" name="edit-btn" data-bs-toggle="modal" 
-                                    data-id="<?php echo $row['userId']; ?>">Edit</button>
-                        </form>
-                    </td>
-                    <td>
-                        <form action="adminProcess.php" method="post">
-                            <input type="hidden" name="delete_id" value="<?php echo $row['userId']; ?>">
-                            <button class="btn btn-outline-danger" name="delete-btn">Delete</button>
-                        </form>                            
-                    </td>
-                        
-                </tr>
-            <?php
-            }
-        } else {
-            echo "<tr><td colspan='4'>No Admin Accounts Found</td></tr>";
-        }
-        ?>
-        </tbody>
-    </table>
-</div>
+                        if ($userResult && mysqli_num_rows($userResult) > 0) {
+                            while ($row = mysqli_fetch_assoc($userResult)) {
+                                ?>
+                                <tr>
+                                    <td><?php echo $row['userId']; ?></td>
+                                    <td><?php echo $row['name']; ?></td>
+                                    <td><?php echo $row['email']; ?></td>
+                                    <td><?php echo $row['contactNo']; ?></td>
+
+                                    <td>
+                                        <form action="adminEdit.php" method="post">
+                                            <input type="hidden" name="edit_id" value="<?php echo $row['userId']; ?>">
+                                            <button class="btn btn-outline-success" name="edit-btn" data-bs-toggle="modal" 
+                                                    data-id="<?php echo $row['userId']; ?>">Edit</button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="adminProcess.php" method="post">
+                                            <input type="hidden" name="delete_id" value="<?php echo $row['userId']; ?>">
+                                            <button class="btn btn-outline-danger" name="delete-btn">Delete</button>
+                                        </form>                            
+                                    </td>
+                                        
+                                </tr>
+                            <?php
+                            }
+                        } else {
+                            echo "<tr><td colspan='4'>No Admin Accounts Found</td></tr>";
+                        }
+                        ?>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+</div>      
 
 </section>
 

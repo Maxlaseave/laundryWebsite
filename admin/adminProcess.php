@@ -96,4 +96,50 @@ if(isset($_POST['delete-btn'])) {
 	}
 	
 }
+
+if(isset($_POST['reg-employee'])){
+
+	function validate($data){
+		$data = trim($data);
+		$data = stripslashes($data);
+		$data = htmlspecialchars($data);
+		return $data;
+	}	
+
+	$name = $_POST['name'];
+	$contact = $_POST['contact'];
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+	$re_password = $_POST['re_password'];
+	$role = "Employee";
+
+	if($password === $re_password) {
+
+		$password = md5($password);
+
+		$sql = "INSERT INTO users VALUES (NULL, '$name','$email','$password','$contact', '$role')";
+		$result = mysqli_query($conn, $sql);
+
+		if($result) {
+			echo "Saved";
+			$_SESSION['success'] = "Employee Profile Added";
+			header('Location: employees.php'); 
+			
+		}
+		else {
+			$_SESSION['status'] = "Employee Profile Not Added";
+			header('Location: employees.php');
+		}	
+	}
+	else {
+		$_SESSION['status'] = "Passwords Do Not Match";
+		echo "<script>
+            const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+            modal.show();
+          </script>";
+		header('Location:  employees.php');
+	}
+}
+
 ?>
+
