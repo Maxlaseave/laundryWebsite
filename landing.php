@@ -5,15 +5,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="../css/bootstrap.css">
-	<link rel="stylesheet" href="../slanding.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="css/slanding.css">
 
 </head>
 <body>
 <nav class="navbar fixed-top navcolor navbar-expand-sm">
 	<div class="container">
 		<a class="navbar-brand item" href="#" style="font-size:20px;">
-			<img src="pash2_logo.png"  width="50" height="45">
+			<img src="img/pashlogo.png"  width="50" height="45">
 			<strong>PashPash</strong> 
 		</a>
 		
@@ -35,12 +35,12 @@
                 </a>
             </li>
 			<li class="nav-item item">
-                <a class="nav-link" href="userLogin.php">
+                <a class="nav-link" href="customer/userLogin.php">
                   Log in
                 </a>
             </li>
             <li class="nav-item item">
-                <a class="nav-link" href="signup.php">
+                <a class="nav-link" href="customer/userSignup.php">
                   Sign up
                 </a>
             </li>
@@ -48,13 +48,15 @@
   </div>
 </nav>
 
-<div class="container slogan">
+<!--div class="container slogan">
 	<h1>FOR FAST & <br>AFFORDABLE<span class="y"><br>LAUNDRY</span></h1>
 	<h3>Open at 9:00am - 8:00pm</h3>
 
 </div>
 
-<!--place image code for pic beside slogan here-->
+<place image code for pic beside slogan here-->
+
+<img src="img\laundry.png" class=" pic" width="100%" height="890" style="margin-top:100px;">
 
 <div class="container-fluid about" id="about">
 
@@ -86,13 +88,17 @@
 		<div class="row">
 			<div class="col-2"></div>
 			<div class="col serv" >
-			<img src="dropoff.png"  >
+			<img src="img\_dropoff.png"  >
 			</div>
 			<div class="col serv">
-			<img src="selfservice.png" >
+			<img src="img\_selfservice.png" >
 			</div>
 			<div class="col-2"></div>
 		</div>
+	</div>
+
+	<div>
+		<img src="../img/laundry-man.png" alt="">
 	</div>
 
 

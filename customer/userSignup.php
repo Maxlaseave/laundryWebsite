@@ -62,19 +62,19 @@
                  <div class="row mb-1">
                  <i class="col-sm-1 bi bi-telephone-fill"></i>
                         <div class="col-sm-10">
-                          <?php if (isset($_GET['contact'])) { ?>
+                          <?php if (isset($_GET['contactNo'])) { ?>
                           <input id="no-arrow" 
-                                  name="contact" 
+                                  name="contactNo" 
                                   class="form-control"  
                                   type="number" 
-                                  placeholder = "Contact Number"
-                                  value="<?php echo $_GET['contact']; ?>"><br>
+                                  placeholder = "+63"
+                                  value="<?php echo $_GET['contactNo']; ?>"><br>
                           <?php }else{ ?>
                             <input id="no-arrow" 
-                                  name="contact" 
+                                  name="contactNo" 
                                   class="form-control"  
                                   type="number"
-                                  placeholder = "Contact Number"><br>
+                                  placeholder = "+63"><br>
                             <?php }?>
                         </div>
                  </div>
@@ -111,10 +111,12 @@
                             <input type="password" name="re_password" class="form-control" placeholder = "Repeat Password">
                         </div>
                  </div>
-
+                  
+                 <form action="userSignup_db.php" method="post">
                   <div class="text-center pt-1 mb-3 pb-1">
-                    <button class="btn btn-outline-primary btn-block fa-lg mb-3" type="submit" name = "reg-btn">Register</button>
+                    <button class="btn btn-outline-primary btn-block fa-lg mb-3" type="submit" name ="reg-btn">Register</button>
                   </div>
+                  </form>
                   
                   <div class="d-flex align-items-center justify-content-center pb-4">
                     <p class="mb-0 me-2">Already have an account?</p>

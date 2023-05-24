@@ -3,6 +3,8 @@
 
 <!--place image code for pic beside slogan here-->
 
+<img src="../img\laundry.png" class="pic2" width="100%" height="890" style="margin-top:100px;">
+
 <div class="container-fluid about" id="about">
 
 	<div class="container-md text-center">

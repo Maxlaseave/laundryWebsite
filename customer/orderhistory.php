@@ -48,7 +48,7 @@
             }
         }
         else { ?>
-            <tr><td class="text-center" colspan='8'>No Bookings</td></tr>
+            <tr><td class="text-center" colspan='8'>No Bookings Completed</td></tr>
             <?php
         }
         ?>
@@ -90,7 +90,7 @@
             }
         }
         else { ?>
-            <tr><td class="text-center" colspan='8'>No Bookings</td></tr>
+            <tr><td class="text-center" colspan='8'>No Bookings Completed</td></tr>
             <?php
         }
         ?>

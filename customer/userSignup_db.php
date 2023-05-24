@@ -2,8 +2,7 @@
 session_start(); 
 include "../dbconn.php";
 
-if (isset($_POST['name']) && isset($_POST['contact'])
-    && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['re_password'])) {
+if (isset($_POST['reg-btn'])) {
 
 	function validate($data){
        $data = trim($data);
@@ -13,7 +12,7 @@ if (isset($_POST['name']) && isset($_POST['contact'])
 	}
 
     $name = validate($_POST['name']);
-    $contact = validate($_POST['contact']);
+    $contact = validate($_POST['contactNo']);
 	$email = validate($_POST['email']);
 	$pass = validate($_POST['password']);
 	$re_pass = validate($_POST['re_password']);

@@ -15,7 +15,7 @@ $result2 = mysqli_query($conn, $sql2);
     <div class="home-content">
         <!--logo-->
         <img src="../img/pashlogo.png" width="50" height="45">
-        <span class="text">Orders</span>
+        <span class="text">Bookings</span>
     </div>
 
     <div class="container-fluid">
@@ -58,7 +58,7 @@ $result2 = mysqli_query($conn, $sql2);
                           <td><?php echo $row['bookingDate']; ?></td>
                           <td><?php echo $row['additionalRemarks']; ?></td>
                           <td><?php echo $userRow['name']; ?></td>
-                          <td><?php echo $userRow['contactNo']; ?></td>
+                          <td>+63 <?php echo $userRow['contactNo']; ?></td>
                           <td><?php echo $row['status']; ?></td>
                       </tr>
                   <?php
@@ -114,7 +114,7 @@ $result2 = mysqli_query($conn, $sql2);
                             <td><?php echo $row['bookingDate']; ?></td>
                             <td><?php echo $row['additionalRemarks']; ?></td>
                             <td><?php echo $userRow['name']; ?></td>
-                            <td><?php echo $userRow['contactNo']; ?></td>
+                            <td>+63 <?php echo $userRow['contactNo']; ?></td>
                             <td><?php echo $row['status']; ?></td>
                         </tr>
                 <?php

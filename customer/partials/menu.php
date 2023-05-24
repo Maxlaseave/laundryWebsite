@@ -52,7 +52,7 @@
           <a class="nav-link" href="mybookings.php">MY BOOKINGS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="orderhistory.php">ORDER HISTORY</a>
+          <a class="nav-link" href="orderhistory.php">BOOKING HISTORY</a>
         </li>
       </ul>
     </div>
