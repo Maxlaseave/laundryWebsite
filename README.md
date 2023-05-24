@@ -15,4 +15,4 @@ pass: tofu123
 
 Employee acc:
 email: chae@gmail.com
-pass:: chae123
+pass: chae123
