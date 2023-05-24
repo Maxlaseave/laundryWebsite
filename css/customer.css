@@ -171,14 +171,3 @@ hr{
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-
-
-
-.navbar navbar-expand-sm secnav mb-1{
-    overflow-y: auto;
-}
-.container-nav {
-    margin-bottom: 0;
-    margin-top: 0;
-
-}
