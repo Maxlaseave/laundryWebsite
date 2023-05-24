@@ -68,7 +68,7 @@ if(isset($_POST['selfServiceSubmit'])) {
     $loads = $_POST['qty'];
     $serviceType = $_POST['serviceType'];
     $timeSlot = $_POST['timeSlot'];
-    $bookingDate = $_POST['sdate'];
+    $bookingDate = $_POST['dropDate'];
     $additionalRemarks = $_POST['remarks'];
 
     $userId = $_SESSION['userId'];
