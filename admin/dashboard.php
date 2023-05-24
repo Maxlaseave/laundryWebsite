@@ -36,7 +36,7 @@
                                     if ($qdropoffTotal = mysqli_num_rows($qdropoff)) echo "<h4>".$qdropoffTotal."</h4>";
                                     ?>
                                       
-                                    <a class="small stretched-link mt-2" href="orders.php">View Details</a>
+                                    <a class="small stretched-link mt-2" href="bookings.php">View Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@
                                     if ($qssTotal = mysqli_num_rows($qss)) echo "<h4>".$qssTotal."</h4>";
                                     ?>
                                       
-                                    <a class="small stretched-link mt-2" href="orders.php">View Details</a>
+                                    <a class="small stretched-link mt-2" href="bookings.php">View Details</a>
                                     </div>
                                 </div>
                             </div>

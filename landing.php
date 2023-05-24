@@ -86,10 +86,10 @@
 		<div class="row">
 			<div class="col-2"></div>
 			<div class="col serv" >
-			<img src="dropoff.png"  >
+			<img src="img\_dropoff.png"  >
 			</div>
 			<div class="col serv">
-			<img src="selfservice.png" >
+			<img src="img\_selfservice.png" >
 			</div>
 			<div class="col-2"></div>
 		</div>
