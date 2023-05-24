@@ -62,7 +62,7 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">Add Admin
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal" s>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal" >
                     Add Admin
                 </button> 
                 </h6>
@@ -98,7 +98,7 @@
                                     <td>
                                         <form action="adminEdit.php" method="post">
                                             <input type="hidden" name="edit_id" value="<?php echo $row['userId']; ?>">
-                                            <button class="btn btn-outline-success" name="edit-btn" data-bs-toggle="modal" 
+                                            <button class="btn btn-outline-success" name="edit-btn"
                                                     data-id="<?php echo $row['userId']; ?>">Edit</button>
                                         </form>
                                     </td>

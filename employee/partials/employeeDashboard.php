@@ -40,28 +40,6 @@
         </ul>
       </li>
 
-      <li>
-        <a href="admins.php">
-        <i class=" bx bx-male"></i>
-          <span class="link_name">Admin</span>
-        </a>
-
-        <ul class="sub-menu">
-          <li><a class="link_name" href="admins.php">Admin</a></li>
-        </ul>
-      </li>
-      
-
-      <li>
-        <a href="employees.php">
-          <i class='bx bx-briefcase' ></i>
-          <span class="link_name">Employees</span>
-        </a>
-
-        <ul class="sub-menu">
-          <li><a class="link_name" href="employees.php">Employees</a></li>
-        </ul>
-      </li>
    
       
     <li>

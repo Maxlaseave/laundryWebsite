@@ -43,7 +43,9 @@
                                 <input type="password" name ="editPass" class ="form-control" placeholder="Enter Passwrod" required>
                             </div>
                             <a href="admins.php" class ="btn btn-secondary">Cancel</a>
-                            <button class="btn btn-primary" type="submit" name="update-btn">Update</button>
+                            <button class="btn btn-outline-success" name="edit-btn"
+                                            data-id="<?php echo $row['userId']; ?>">Update</button>
+                                        
                         </form>
                     <?php
                     }
@@ -51,5 +53,49 @@
                 ?>
             </div>
         </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal fade" id="editModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Add a New Admin</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <form method="post" action="adminProcess.php">
+            <div class="modal-body">
+                <div class="form-group mb-3">
+                    <label>Name</label>
+                    <input type="text" name ="name" class ="form-control" placeholder="Enter Name" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Contact Number</label>
+                    <input type="tel" name ="contact" class ="form-control" placeholder="Enter Contact" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Email</label>
+                    <input type="email" name ="email" class ="form-control" placeholder="Enter Email" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Password</label>
+                    <input type="password" name ="password" class ="form-control" placeholder="Enter Passwrod" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Repeat Password</label>
+                    <input type="password" name ="re_password" class ="form-control" placeholder="Enter Repeat Password" required>
+                </div>
+           
+            </div>    
+        
+       
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" name="reg-admin">Add Admin</button>
+            </div>
+        </form>
+        </div>
+    </div>
     </div>
 </section>
