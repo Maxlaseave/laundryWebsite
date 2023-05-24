@@ -78,7 +78,6 @@ if(isset($_POST['update-btn'])){
 	}
 }
 
-
 if(isset($_POST['delete-btn'])) {
 
 	$userId = $_POST['delete_id'];
@@ -96,6 +95,7 @@ if(isset($_POST['delete-btn'])) {
 	}
 	
 }
+
 
 if(isset($_POST['reg-employee'])){
 
@@ -141,5 +141,54 @@ if(isset($_POST['reg-employee'])){
 	}
 }
 
+
+if(isset($_POST['update-btn-emp'])){
+
+	function validate($data){
+		$data = trim($data);
+		$data = stripslashes($data);
+		$data = htmlspecialchars($data);
+		return $data;
+	}	
+	$userId = $_POST['edit_id'];
+	$newName = $_POST['editName'];
+	$newEmail = $_POST['editEmail'];
+	$newContact = $_POST['editContact'];
+	$newPass = $_POST['editPass'];
+
+	$newPass = md5($newPass);
+	$update = "UPDATE users SET name ='$newName', email ='$newEmail', contactNo='$newContact', password='$newPass' WHERE userId='$userId'"; 
+	$result = mysqli_query($conn, $update);
+
+	if($result){
+		$_SESSION['success'] = "Employee Profile Updated";
+		header('Location: employees.php');
+
+	}
+	else {
+
+		$_SESSION['status'] = "Employee Profile Not Updated";
+		header('Location: employees.php');
+	}
+}
+
+
+if(isset($_POST['delete-btn-emp'])) {
+
+	$userId = $_POST['delete_id'];
+
+	$delete = "DELETE FROM users WHERE userId='$userId'";
+	$result = mysqli_query($conn, $delete);
+
+	if($result) {
+		$_SESSION['success'] = "Employee Profile Successfully Deleted";
+		header('Location: employees.php');
+	}
+	else {
+		$_SESSION['status'] = "Employee Profile Not Deleted";
+		header('Location: employees.php');
+	}
+	
+}
 ?>
 
