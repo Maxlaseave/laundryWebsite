@@ -17,7 +17,7 @@ $result2 = mysqli_query($conn, $sql2);
         <img src="../img/pashlogo.png" width="50" height="45">
         <span class="text">Orders</span>
     </div>
-
+<!--Drop Off -->
     <div class="container-fluid">
         <div class="card shadow mb-4 mt-2" style="width:99%; margin-left: 10px;">
             <div class="card-header">
@@ -62,9 +62,10 @@ $result2 = mysqli_query($conn, $sql2);
                           <td><?php echo $userRow['contactNo']; ?></td>
                           <td><?php echo $row['status']; ?></td>
                           <td>
-                          <input type="text" name="drop_id" value="<?php echo $row['dropOffId']; ?>">
-                                <button class="btn btn-outline-success" name="edit-drop-btn" data-bs-toggle="modal" 
-                                data-bs-target= "#dropModal">Edit</button> 
+                            <form action="editDrop.php" method = "post">
+                                <input type="hidden" name="drop_id" value="<?php echo $row['dropOffId']; ?>">
+                                <button class="btn btn-outline-success" name="edit-drop-btn">Edit</button> 
+                            </form>
                           </td>
                       </tr>
                   <?php
@@ -81,6 +82,7 @@ $result2 = mysqli_query($conn, $sql2);
 </div>
 </div>
 
+<!--Self Service -->
     <div class="container-fluid">
         <div class="card shadow mb-4 mt-2" style="width:99%; margin-left: 10px;">
             <div class="card-header">
@@ -125,10 +127,11 @@ $result2 = mysqli_query($conn, $sql2);
                             <td><?php echo $userRow['contactNo']; ?></td>
                             <td><?php echo $row['status']; ?></td>
                             <td>
-                                <input type="hidden" name="self_id" value="<?php echo $row['selfServiceId']; ?>">
-                                <button class="btn btn-outline-success" name="edit-self-btn" data-bs-toggle="modal" 
-                                data-bs-target= "#selfModal">Edit</button>   
-                                </td>
+                                <form action="editSelf.php" method = "post">
+                                    <input type="hidden" name="self_id" value="<?php echo $row['selfServiceId']; ?>">
+                                    <button class="btn btn-outline-success" name="edit-self-btn">Edit</button>   
+                                </form>
+                            </td>
                         </tr>
                 <?php
                     }

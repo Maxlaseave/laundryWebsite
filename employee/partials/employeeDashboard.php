@@ -67,7 +67,7 @@
               <div class="profile_name"><?php echo $row['name']; ?></div>
               <div class="job"><?php echo $row['role']; ?></div>
               </div>
-              <a href="adminLogout.php" class="logout-link">
+              <a href="employeeLogout.php" class="logout-link">
                 <i class='bx bx-log-out' role="button"></i>
               </a>
               </div> 
