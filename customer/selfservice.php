@@ -30,14 +30,14 @@
 
         <div class="col">
             <div class="input-group mb-4">
-            <span class="input-group-text">Self Service Time: </span>
+            <span class="input-group-text">Self-Service Time: </span>
             <input type="time" class="form-control" id="drop_off_time" name="timeSlot" required>     
             </div>
         </div>
 
         <div class="col">
             <div class="input-group mb-4">
-            <span class="input-group-text">Drop-Off Date: </span>
+            <span class="input-group-text">Self-Service Date: </span>
             <input type="date" class="form-control" name="dropDate" required>
             </div>
         </div>
@@ -59,7 +59,7 @@
     margin: 20px;
     background-color: #d7e6e5;
     position: absolute;
-    left: 79.8%;
+    left: 78.9%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);">Submit</button>
 
