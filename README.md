@@ -1,8 +1,5 @@
 # laundryWebsite
-<<<<<<< HEAD
-=======
 
->>>>>>> main
 Website Name: PashPash
 Website: Laundry Booking Website
 
