@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<div class="container-nav">
+<div class="container">
   <nav class="navbar fixed-top navcolor navbar-expand-sm">
     <div class="container">
       <a class="navbar-brand item" href="#" style="font-size:20px;">

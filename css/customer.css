@@ -173,6 +173,6 @@ hr{
 }
 
 
-.container-nav {
-    margin-bottom: 40%;
+.navbar navbar-expand-sm secnav mb-1{
+    overflow-y: auto;
 }

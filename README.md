@@ -1,3 +1,9 @@
 # laundryWebsite
 
-first go to landing.php
+
+Website: Laundry Booking Website
+
+Members: 
+Desiree Godinez
+Nikki Jel Pan
+Maxine Alexis Tabugon
