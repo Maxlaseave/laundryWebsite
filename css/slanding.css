@@ -11,6 +11,15 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.pic{
+
+    margin-bottom: 250px;
+    margin-left: -15px;
+    width: 98vh;
+    display:block;
+    height: 75vh;
+}
+
 .slogan{
 
     margin-top: 250px;

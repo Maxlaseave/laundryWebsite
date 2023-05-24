@@ -48,14 +48,16 @@
   </div>
 </nav>
 
-<div class="container slogan">
+<!--div class="container slogan">
 	<h1>FOR FAST & <br>AFFORDABLE<span class="y"><br>LAUNDRY</span></h1>
 	<h3>Open at 9:00am - 8:00pm</h3>
 
 </div>
 
-<!--place image code for pic beside slogan here-->
+<place image code for pic beside slogan here-->
 
+<div class="container-fluid pic"><img src="img\laundry.png" width="101%" height="890" style="margin-top:100px;">
+</div>
 <div class="container-fluid about" id="about">
 
 	<div class="container-md text-center">
