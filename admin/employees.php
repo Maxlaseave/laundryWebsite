@@ -7,6 +7,8 @@
       <img src="../img\pashlogo.png"  width="50" height="45">
       <span class="text">Employees</span>
     </div>
+
+    
         <!-- Add Modal -->
         <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -32,7 +34,7 @@
                 </div>
                 <div class="form-group mb-3">
                     <label>Password</label>
-                    <input type="password" name ="password" class ="form-control" placeholder="Enter Passwrod" required>
+                    <input type="password" name ="password" class ="form-control" placeholder="Enter Password" required>
                 </div>
                 <div class="form-group mb-3">
                     <label>Repeat Password</label>
@@ -54,17 +56,13 @@
 
 <!-- Admin Table -->
   <div class="container-fluid">
-          <div class="card shadow mb-4">
-              <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Add Employees
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal" s>
-                      Add Employee
-                  </button> 
-                  </h6>
-              </div>
+  <div class="card shadow mb-4 mt-2" style="width:99%; margin-left: 10px;">
+          <div class="card-header">
+            <h6 class="modal-title fs-5" id="exampleModalLabel">List of Employees</h6>
+            </div>
               <div class="card-body">
                   <div class="table-responsive" id="tables">
-                      <table class="table table-bordered table-hover" id="admins">
+                      <table class="table table-hover" id="admins">
                           <thead>
                           <tr>
                               <th>ID</th>
@@ -108,11 +106,15 @@
                               <?php
                               }
                           } else {
-                              echo "<tr><td colspan='4'>No Admin Accounts Found</td></tr>";
+                              echo "<tr><td colspan='6'>No Admin Accounts Found</td></tr>";
                           }
                           ?>
                           </tbody>
                       </table>
+                      <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal" s>
+                    Add Employee
+                </button> 
                   </div>
           </div>
   </div>      

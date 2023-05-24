@@ -9,9 +9,9 @@
 
 
     <div class="container-fluid">
-        <div class="card shadow mb-4" style="width:50%">
+        <div class="card shadow mb-4 mt-5" style="width:50%; margin-left: 25%; ">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Edit Employee Information</h6>
+                <h6 class="m-0 fs-6 font-weight-bold text-primary">Edit Employee Information</h6>
             </div>
             <div class="card-body">
                 <?php

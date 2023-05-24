@@ -59,17 +59,13 @@
 <!-- Admin Table -->
 
 <div class="container-fluid">
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Add Admin
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal" s>
-                    Add Admin
-                </button> 
-                </h6>
+        <div class="card shadow mb-4 mt-2" style="width:99%; margin-left: 10px;">
+            <div class="card-header">
+            <h6 class="modal-title fs-5" id="exampleModalLabel">List of Admins</h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive" id="tables">
-                    <table class="table table-bordered table-hover" id="admins">
+                    <table class="table table-hover" id="admins">
                         <thead>
                         <tr>
                             <th>ID</th>
@@ -118,6 +114,12 @@
                         ?>
                         </tbody>
                     </table>
+
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal" s>
+                    Add Admin
+                </button> 
+            </div>
                 </div>
         </div>
 </div>      

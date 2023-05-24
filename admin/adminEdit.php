@@ -7,11 +7,13 @@
       <span class="text">Admins</span>
     </div>
 
+      
+
 
     <div class="container-fluid">
-        <div class="card shadow mb-4" style="width:50%">
+    <div class="card shadow mb-4 mt-5" style="width:50%; margin-left: 25%; ">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Edit Admin Information</h6>
+                <h6 class="m-0 fs-6 font-weight-bold text-primary">Edit Admin Information</h6>
             </div>
             <div class="card-body">
                 <?php
@@ -40,7 +42,7 @@
                             </div>
                             <div class="form-group mb-3">
                                 <label>Password</label>
-                                <input type="password" name ="editPass" class ="form-control" placeholder="Enter Passwrod" required>
+                                <input type="password" name ="editPass" class ="form-control" placeholder="Enter Password" required>
                             </div>
                             <a href="admins.php" class ="btn btn-secondary">Cancel</a>
                             <button class="btn btn-primary" type="submit" name="update-btn">Update</button>
@@ -49,7 +51,11 @@
                     }
                 }
                 ?>
-            </div>
-        </div>
+                
+           </div>
     </div>
+    </div>
+
+    
 </section>
+

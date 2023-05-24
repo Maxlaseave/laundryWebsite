@@ -18,10 +18,15 @@ $result2 = mysqli_query($conn, $sql2);
         <span class="text">Orders</span>
     </div>
 
-      <div class = "table-responsive" style="margin-top: 5%">
-      <h1>Drop-Off</h1>
-          <table class = "table table-secondary table-hover" id = "bookings" width = "80%" cellspacing = "0">
-              <thead  class="thead-dark">
+    <div class="container-fluid">
+        <div class="card shadow mb-4 mt-2" style="width:99%; margin-left: 10px;">
+            <div class="card-header">
+            <h6 class="modal-title fs-5" id="exampleModalLabel">Drop-Off</h6>
+            </div>
+            <div class="card-body">
+    
+            <table class = "table table-hover" id = "bookings">
+              <thead>
                   <tr>
                       <th>ID</th>
                       <th>No. of Loads</th>
@@ -66,11 +71,19 @@ $result2 = mysqli_query($conn, $sql2);
               </tbody>
           </table>
       </div>
+    </div>
+</div>
+</div>
 
-      <div class="table-responsive">
-        <h1>Self Service</h1>
-        <table class="table table-secondary table-hover" id="bookings" width="50%" cellspacing="0">
-            <thead class="thead-dark">
+    <div class="container-fluid">
+        <div class="card shadow mb-4 mt-2" style="width:99%; margin-left: 10px;">
+            <div class="card-header">
+            <h6 class="modal-title fs-5" id="exampleModalLabel">Self-service</h6>
+            </div>
+            <div class="card-body">
+    
+            <table class = "table table-hover" id = "bookings">
+            <thead>
                 <tr>
                     <th>ID</th>
                     <th>No. of Loads</th>
@@ -113,7 +126,8 @@ $result2 = mysqli_query($conn, $sql2);
             </tbody>
         </table>
     </div>
-
+            </div>
+            </div>
 </section>
 <?php
 
