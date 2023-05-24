@@ -18,11 +18,11 @@ if(isset($_POST['update-drop-status'])){
 
     if($result){
         $_SESSION['success'] = "Order Updated";
-        header('Location: orders.php');
+        header('Location: bookings.php');
         exit();
     } else {
         $_SESSION['status'] = "Order Not Updated";
-        header('Location: orders.php');
+        header('Location: bookings.php');
         exit();
     }
 }
@@ -44,11 +44,11 @@ if(isset($_POST['update-self-status'])){
 
     if($result){
         $_SESSION['success'] = "Order Updated";
-        header('Location: orders.php');
+        header('Location: bookings.php');
         exit();
     } else {
         $_SESSION['status'] = "Order Not Updated";
-        header('Location: orders.php');
+        header('Location: bookings.php');
         exit();
     }
 }
