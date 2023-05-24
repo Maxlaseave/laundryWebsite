@@ -15,7 +15,7 @@ $result2 = mysqli_query($conn, $sql2);
     <div class="home-content">
         <!--logo-->
         <img src="../img/pashlogo.png" width="50" height="45">
-        <span class="text">Orders</span>
+        <span class="text">Bookings</span>
     </div>
 
     <div class="container-fluid">
