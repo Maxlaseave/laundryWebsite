@@ -95,6 +95,10 @@
 		</div>
 	</div>
 
+	<div>
+		<img src="../img/laundry-man.png" alt="">
+	</div>
+
 
 	
 
