@@ -23,17 +23,17 @@
                 }
                 ?>
                 <form action="employeeProcess.php" method="POST">
-                    <h4>Order ID: <?php echo $row['selfServiceId']; ?></h4>
+                    <h4>Booking ID: <?php echo $row['selfServiceId']; ?></h4>
                     <input type="hidden" name="self_id" value="<?php echo $row['selfServiceId']; ?>">
                     <select class="form-select" name="status">
-                        <option value="">Select Any One</option>
-                        <option value="Pending" <?php if ($row["status"] == 'Pending') echo "selected"; ?>>Pending</option>
-                        <option value="In Progress" <?php if ($row["status"] == 'In Progress') echo "selected"; ?>>In Progress</option>
-                        <option value="Completed" <?php if ($row["status"] == 'Completed') echo "selected"; ?>>Completed</option>
-                        <option value="Denied" <?php if ($row["status"] == 'Denied') echo "selected"; ?>>Denied</option>
-                        <!-- Add other options here -->
+                        <option value="">Select</option>
+                        <option value="1" <?php if ($row["status"] == 'Pending') echo "selected"; ?>>Pending</option>
+                        <option value="2" <?php if ($row["status"] == 'Confirmed') echo "selected"; ?>>Confirmed</option>
+                        <option value="3" <?php if ($row["status"] == 'In Progress') echo "selected"; ?>>In Progress</option>
+                        <option value="4" <?php if ($row["status"] == 'Completed') echo "selected"; ?>>Completed</option>
+                        <option value="5" <?php if ($row["status"] == 'Denied') echo "selected"; ?>>Denied</option>
                     </select>
-                    <button class="btn btn-primary"type="submit" name="update-self-status" value="Update Status">Update Status</button>
+                    <button class="btn btn-primary mt-4"type="submit" name="update-self-status" value="Update Status">Update Status</button>
                 </form>
             </div>
         </div>

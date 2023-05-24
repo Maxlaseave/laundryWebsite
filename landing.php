@@ -5,15 +5,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="../css/bootstrap.css">
-	<link rel="stylesheet" href="../slanding.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="css/slanding.css">
 
 </head>
 <body>
 <nav class="navbar fixed-top navcolor navbar-expand-sm">
 	<div class="container">
 		<a class="navbar-brand item" href="#" style="font-size:20px;">
-			<img src="pash2_logo.png"  width="50" height="45">
+			<img src="img/pashlogo.png"  width="50" height="45">
 			<strong>PashPash</strong> 
 		</a>
 		
@@ -35,12 +35,12 @@
                 </a>
             </li>
 			<li class="nav-item item">
-                <a class="nav-link" href="userLogin.php">
+                <a class="nav-link" href="customer/userLogin.php">
                   Log in
                 </a>
             </li>
             <li class="nav-item item">
-                <a class="nav-link" href="signup.php">
+                <a class="nav-link" href="customer/userSignup.php">
                   Sign up
                 </a>
             </li>
