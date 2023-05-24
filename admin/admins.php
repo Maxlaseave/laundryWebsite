@@ -55,7 +55,6 @@
     </div>
     </div>
 
-
 <!-- Admin Table -->
 
 <div class="container-fluid">
