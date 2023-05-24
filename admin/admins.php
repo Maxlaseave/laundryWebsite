@@ -28,7 +28,7 @@
                 </div>
                 <div class="form-group mb-3">
                     <label>Contact Number</label>
-                    <input type="tel" name ="contact" class ="form-control" placeholder="Enter Contact" required>
+                    <input type="tel" name ="contact" class ="form-control" placeholder="+63" required>
                 </div>
                 <div class="form-group mb-3">
                     <label>Email</label>
@@ -54,7 +54,6 @@
         </div>
     </div>
     </div>
-
 
 <!-- Admin Table -->
 
@@ -90,7 +89,7 @@
                                     <td><?php echo $row['userId']; ?></td>
                                     <td><?php echo $row['name']; ?></td>
                                     <td><?php echo $row['email']; ?></td>
-                                    <td><?php echo $row['contactNo']; ?></td>
+                                    <td>+63 <?php echo $row['contactNo']; ?></td>
 
                                     <td>
                                         <form action="adminEdit.php" method="post">
