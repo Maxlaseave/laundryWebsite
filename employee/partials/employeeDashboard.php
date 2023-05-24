@@ -31,12 +31,10 @@
             <i class='bx bx-collection' ></i>
             <span class="link_name">Bookings</span>
           </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
+          
         </div>
         <ul class="sub-menu">
           <li><a class="link_name" href="bookings.php">Bookings</a></li>
-          <li><a href="#dropoff">Drop-off</a></li>
-          <li><a href="#selfservice">Self-service</a></li>
         </ul>
       </li>
 
