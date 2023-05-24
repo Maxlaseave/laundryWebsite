@@ -43,7 +43,7 @@
                                 <input type="password" name ="editPass" class ="form-control" placeholder="Enter Passwrod" required>
                             </div>
                             <a href="admins.php" class ="btn btn-secondary">Cancel</a>
-                            <button class="btn btn-primary" type="submit" name="update-btn ">Update</button>
+                            <button class="btn btn-primary" type="submit" name="update-btn-emp">Update</button>
                         </form>
                     <?php
                     }

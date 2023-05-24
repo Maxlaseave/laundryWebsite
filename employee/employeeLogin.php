@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Admin Login</title>
+    <title>Employee Login</title>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/userLogin.css">
 
@@ -22,7 +22,8 @@
         <div class="card bg-dark text-white" style="border-radius: 1rem;">
           <div class="card-body p-5 text-center">
             <div class="mb-md-5 mt-md-4 pb-5">
-              <form action ="adminLogin_db.php" method = "POST">
+
+              <form action ="employeeLogin_db.php" method = "POST">
 
                 <?php if (isset($_GET['error'])) { ?>
                     <p class="error"><?php echo $_GET['error']; ?></p>
@@ -31,14 +32,13 @@
                 <div class="text-center">
                   <img src="../img/pashlogo.png"
                     style="width: 80px;" alt="logo">
-                  <h4 class="mt-1 mb-5 pb-1">ADMIN LOGIN</h4>
+                  <h4 class="mt-1 mb-5 pb-1">EMPLOYEE LOGIN</h4>
                 </div>
-
                 <p class="text-white-50 mb-5">Please enter your login and password!</p>
 
                 <div class="form-outline form-white mb-4">
                   <input type="email"  name = "email" class="form-control form-control-lg" />
-                  <label class="form-label" >Email</label>
+                  <label class="form-label">Email</label>
                 </div>
 
                 <div class="form-outline form-white mb-4">
@@ -46,15 +46,10 @@
                   <label class="form-label">Password</label>
                 </div>
 
-
-                <button class="btn btn-outline-light btn-lg px-5" type="submit" name = "adminLogin">Login</button>
-
+                <button class="btn btn-outline-light btn-lg px-5" type="submit" name = "empLogin">Login</button>
 
               </form>
             </div>
-
-
-
           </div>
         </div>
       </div>

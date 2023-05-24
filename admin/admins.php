@@ -59,6 +59,7 @@
 <!-- Admin Table -->
 
 <div class="container-fluid">
+
         <div class="card shadow mb-4 mt-2" style="width:99%; margin-left: 10px;">
             <div class="card-header">
             <h6 class="modal-title fs-5" id="exampleModalLabel">List of Admins</h6>
@@ -94,7 +95,7 @@
                                     <td>
                                         <form action="adminEdit.php" method="post">
                                             <input type="hidden" name="edit_id" value="<?php echo $row['userId']; ?>">
-                                            <button class="btn btn-outline-success" name="edit-btn" data-bs-toggle="modal" 
+                                            <button class="btn btn-outline-success" name="edit-btn"
                                                     data-id="<?php echo $row['userId']; ?>">Edit</button>
                                         </form>
                                     </td>

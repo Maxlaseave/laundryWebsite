@@ -98,7 +98,7 @@
                                       <td>
                                           <form action="adminProcess.php" method="post">
                                               <input type="hidden" name="delete_id" value="<?php echo $row['userId']; ?>">
-                                              <button class="btn btn-outline-danger" name="delete-btn">Delete</button>
+                                              <button class="btn btn-outline-danger" name="delete-btn-emp">Delete</button>
                                           </form>                            
                                       </td>
                                           
