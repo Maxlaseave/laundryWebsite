@@ -9,9 +9,9 @@
     if(isset($_SESSION['status']) && $_SESSION['status']  != ''){
 
             
-                echo '<script type="text/javascript">';
-                echo 'setTimeout(function () { swal("WOW!","Message!","success");';
-                echo '}, 1000);</script>';
+                 echo '<script type="text/javascript">';
+                 echo 'setTimeout(function () { swal("WOW!","Message!","success");';
+                 echo '}, 1000);</script>';
     
     }
 ?>
