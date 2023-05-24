@@ -5,13 +5,13 @@
     <div class="home-content">
         <!--logo-->
         <img src="../img/pashlogo.png" width="50" height="45">
-        <span class="text">Change DropOff Status</span>
+        <span class="text">Bookings</span>
     </div>
 
     <div class="container-fluid">
         <div class="card shadow mb-4 mt-5" style="width:50%; margin-left: 25%; ">
             <div class="card-header py-3">
-                <h6 class="m-0 fs-6 font-weight-bold text-primary">Edit Admin Information</h6>
+                <h6 class="m-0 fs-6 font-weight-bold text-primary">Change Drop Off Status</h6>
             </div>
             <div class="card-body">
                 <?php

@@ -67,7 +67,7 @@
                                   name="contact" 
                                   class="form-control"  
                                   type="number" 
-                                  placeholder = "Contact Number"
+                                  placeholder = "+63"
                                   value="<?php echo $_GET['contact']; ?>"><br>
                           <?php }else{ ?>
                             <input id="no-arrow" 

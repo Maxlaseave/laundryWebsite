@@ -119,7 +119,7 @@ if (isset($_SESSION['userId'])) {
                 <div class="col">
                 <div class="input-group mb-1">
                 <span class="input-group-text">Contact No: </span>
-                <input type="number" class="form-control" name="contactNo" placeholder="Enter contact number" value="<?php echo $pcon;?>"><br>
+                <input type="number" class="form-control" name="contactNo" placeholder="+63" value="<?php echo $pcon;?>"><br>
                 </div>
 
                 <div class="text-center pt-1 mb-3 pb-1">
