@@ -7,10 +7,10 @@
     include "../dbconn.php"; 
 
     $userID = $_SESSION['userId'];
-    $sql1 = "SELECT * FROM selfService WHERE userId = $userID";
+    $sql1 = "SELECT * FROM selfService WHERE status IN('Pending', 'In Progress') AND userId = $userID";
     $result1 = mysqli_query($conn, $sql1);
 
-    $sql2 = "SELECT * FROM dropoff WHERE userId = $userID";
+    $sql2 = "SELECT * FROM dropoff  WHERE status IN('Pending', 'In Progress') AND userId = $userID";
     $result2 = mysqli_query($conn, $sql2);
 ?>
 
