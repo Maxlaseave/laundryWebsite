@@ -47,7 +47,7 @@
         
        
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 <button type="submit" class="btn btn-primary" name="reg-admin">Add Admin</button>
             </div>
         </form>
@@ -117,7 +117,7 @@
                     </table>
 
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal" s>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal" name="reg-admin">
                     Add Admin
                 </button> 
             </div>

@@ -47,7 +47,7 @@
                             <a href="admins.php" class ="btn btn-secondary">Cancel</a>
                             <button class="btn btn-outline-success" name="edit-btn"
                                             data-id="<?php echo $row['userId']; ?>">Update</button>
-                                        
+                            
                         </form>
                     <?php
                     }
@@ -107,4 +107,5 @@
     </div>
 
 </section>
+<?php include('partials/scripts.php'); ?>
 

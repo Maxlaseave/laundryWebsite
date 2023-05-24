@@ -1,9 +1,8 @@
 <?php 
 session_start(); 
 include "../dbconn.php";
-
-//Admin CRUD
 //add admin
+
 if(isset($_POST['reg-admin'])){
 
 	function validate($data){
@@ -30,12 +29,12 @@ if(isset($_POST['reg-admin'])){
 		if($result) {
 			echo "Saved";
 			$_SESSION['success'] = "Admin Profile Added";
-			header('Location: admins.php'); //change to move to a different modal
+			header('Location: admins.php?=Admin Profile Added'); //change to move to a different modal
 			
 		}
 		else {
 			$_SESSION['status'] = "Admin Profile Not Added";
-			header('Location: admins.php');
+			header('Location: admins.php?error=Admin Profile Not Added');
 		}	
 	}
 	else {
@@ -48,7 +47,7 @@ if(isset($_POST['reg-admin'])){
 	}
 }
 
-//update
+
 if(isset($_POST['update-btn'])){
 
 	function validate($data){
@@ -79,7 +78,7 @@ if(isset($_POST['update-btn'])){
 	}
 }
 
-//delete
+
 if(isset($_POST['delete-btn'])) {
 
 	$userId = $_POST['delete_id'];
@@ -97,8 +96,6 @@ if(isset($_POST['delete-btn'])) {
 	}
 	
 }
-
-//Employee CRUD
 
 if(isset($_POST['reg-employee'])){
 
@@ -144,53 +141,5 @@ if(isset($_POST['reg-employee'])){
 	}
 }
 
-if(isset($_POST['update-btn-emp'])){
-
-	function validate($data){
-		$data = trim($data);
-		$data = stripslashes($data);
-		$data = htmlspecialchars($data);
-		return $data;
-	}	
-	$userId = $_POST['edit_id'];
-	$newName = $_POST['editName'];
-	$newEmail = $_POST['editEmail'];
-	$newContact = $_POST['editContact'];
-	$newPass = $_POST['editPass'];
-
-	$newPass = md5($newPass);
-	$update = "UPDATE users SET name ='$newName', email ='$newEmail', contactNo='$newContact', password='$newPass' WHERE userId='$userId'"; 
-	$result = mysqli_query($conn, $update);
-
-	if($result){
-		$_SESSION['success'] = "Employee Profile Updated";
-		header('Location: employees.php');
-
-	}
-	else {
-
-		$_SESSION['status'] = "Employee Profile Not Updated";
-		header('Location: employees.php');
-	}
-}
-
-
-if(isset($_POST['delete-btn-emp'])) {
-
-	$userId = $_POST['delete_id'];
-
-	$delete = "DELETE FROM users WHERE userId='$userId'";
-	$result = mysqli_query($conn, $delete);
-
-	if($result) {
-		$_SESSION['success'] = "Employee Profile Successfully Deleted";
-		header('Location: employees.php');
-	}
-	else {
-		$_SESSION['status'] = "Employee Profile Not Deleted";
-		header('Location: employees.php');
-	}
-	
-}
 ?>
 

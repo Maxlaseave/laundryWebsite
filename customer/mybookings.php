@@ -15,9 +15,9 @@
 ?>
 
 
-<div class = "table-responsive" style = "margin-top: 10%">
-<h1>Self Service</h1>
-    <table class = "table table-secondary table-hover" id = "bookings" width = "50%" cellspacing = "0">
+<div class = "container table-responsive" style = "margin-top: 10%">
+<p class="smalltitle"><strong>SELF-SERVICE</strong></p>
+    <table class = "table table-hover mb-5" id = "bookings" width = "50%" cellspacing = "0">
         <thead>
             <tr>
                 <th>ID</th>
@@ -47,18 +47,19 @@
             <?php
             }
         }
-        else {
-            echo "<tr><td colspan='6'>No Bookings</td></tr>";
+        else { ?>
+            <tr><td class="text-center" colspan='8'>No Bookings</td></tr>
+            <?php
         }
         ?>
         </tbody>
     </table>
-</div>
 
 
-<h1>Drop-Off</h1>
+
 <div class = "table-responsive">
-    <table class = "table table-secondary table-hover" id = "bookings" width = "50%" cellspacing = "0">
+<p class="smalltitle"><strong>DROP OFF</strong></p>
+    <table class = "table table-hover" id = "bookings" width = "50%" cellspacing = "0">
         <thead>
             <tr>
                 <th>ID</th>
@@ -85,13 +86,16 @@
                     <td><?php echo $row['additionalRemarks']; ?></td>
                     <td><?php echo $row['status']; ?></td>
                 </tr>
-            <?php
+                <?php
             }
         }
-        else {
-            echo "<tr><td colspan='6'>No Bookings</td></tr>";
+        else { ?>
+            <tr><td class="text-center" colspan='8'>No Bookings</td></tr>
+            <?php
         }
         ?>
         </tbody>
     </table>
 </div>
+
+    </div>
